@@ -15,10 +15,15 @@
         <v-icon name="bi-linkedin" />
         <label for="LinkedInButton"> LinkedIn</label>
       </button>
+      <button id="githubButton" @click="redirect('https://github.com/SorceressLyra')">
+        <v-icon name="bi-github" />
+        <label for="githubButton"> Github</label>
+      </button>
       <button id="EmailButton" @click="redirect('mailto:lyramikkelsen@gmail.com')">
         <v-icon name="md-email" />
         <label for="EmailButton"> Send me an email</label>
       </button>
+
     </div>
   </div>
 </template>
@@ -44,9 +49,11 @@ function redirect(url: string) {
   flex-direction: column;
   align-items: center;
 }
-.contact-info h2{
+
+.contact-info h2 {
   text-align: center;
 }
+
 .details-flex-box {
   display: flex;
   flex-direction: column;
@@ -55,13 +62,17 @@ function redirect(url: string) {
 
 .button-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 /* Mobile Tweaks */
 @media screen and (max-width: 500px) {
   .details-flex-box {
     margin: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
   }
 }
 </style>
