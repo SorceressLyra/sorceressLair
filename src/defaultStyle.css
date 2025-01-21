@@ -1,0 +1,78 @@
+/* 
+COLOR SCHEME
+FBF5DD
+A6CDC6
+16404D
+DDA853
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: #16404D;
+    border-radius: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+button {
+    font-family: "Montserrat", serif;
+    background-color: #A6CDC6;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button:hover {
+    font-family: "Montserrat", serif;
+    background-color: #f0d7ae;
+    transform: scale(1.02);
+    transition: 20ms;
+}
+button:active {
+    font-family: "Montserrat", serif;
+    background-color: #DDA853;
+    transform: scale(0.99);
+    transition: 20ms;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    background-color: #FBF5DD;
+}
+
+h1,
+h2 {
+    font-family: "Montserrat", serif;
+    font-weight: 800;
+    color: #FBF5DD;
+}
+
+p {
+    color: #FBF5DD;
+}
+
+a {
+    color: #A6CDC6;
+}
+
+a:hover {
+    color: #DDA853;
+}
+
+/* Mobile Tweaks */
+@media screen and (max-width: 500px) {
+    .card {
+      flex-direction: column;
+    }
+  }
