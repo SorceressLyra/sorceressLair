@@ -21,7 +21,7 @@
       </button>
       <button id="EmailButton" @click="redirect('mailto:lyramikkelsen@gmail.com')">
         <v-icon name="md-email" />
-        <label for="EmailButton"> Send me an email</label>
+        <label for="EmailButton"> Email Me</label>
       </button>
 
     </div>
