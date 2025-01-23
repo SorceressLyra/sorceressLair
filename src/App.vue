@@ -32,7 +32,8 @@
 import profilePhoto from './Assets/Images/me.jpg'
 
 function redirect(url: string) {
-  window.location.href = url;
+  console.log("Redirecting to: ", url);
+  // window.location.href = url;
 }
 </script>
 
