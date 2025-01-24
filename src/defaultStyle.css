@@ -73,7 +73,7 @@ a:hover {
 }
 
 /* Mobile Tweaks */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 560px) {
     .card {
         flex-direction: column;
     }
