@@ -67,7 +67,7 @@ function redirect(url: string) {
 }
 
 /* Mobile Tweaks */
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 500px) {
   .details-flex-box {
     margin: 1rem;
   }
