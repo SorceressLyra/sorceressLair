@@ -9,10 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "oh-vue-icons": "^1.0.0-rc3",
+    "axios": "^1.7.9",
+    "naive-ui": "^2.41.0",
+    "unplugin-auto-import": "^19.0.0",
+    "vfonts": "^0.0.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@vicons/fa": "^0.13.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "typescript": "~5.6.2",

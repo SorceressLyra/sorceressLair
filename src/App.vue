@@ -1,39 +1,79 @@
 <template>
-  <div class="profile-flex-box card">
-    <img class="profile-photo" :src="profilePhoto" alt="">
-    <div class="details-flex-box">
-      <h1>Lyra S.R. Mikkelsen</h1>
-      <h2>Fullstack Software Engineer</h2>
-      <p class="skill-info">C# | Javascript/Typescript | C/C++</p>
-      <p class="skill-info">.NET | React Vue.js | AI/Machine Learning</p>
-    </div>
-  </div>
-  <div class="card contact-info">
-    <h2>Reach out</h2>
-    <div class="button-container">
-      <button id="LinkedInButton" @click="redirect('https://www.linkedin.com/in/lyramikkelsen/')">
-        <v-icon name="bi-linkedin" />
-        <label for="LinkedInButton"> LinkedIn</label>
-      </button>
-      <button id="githubButton" @click="redirect('https://github.com/SorceressLyra')">
-        <v-icon name="bi-github" />
-        <label for="githubButton"> Github</label>
-      </button>
-      <button id="EmailButton" @click="redirect('mailto:lyramikkelsen@gmail.com')">
-        <v-icon name="md-email" />
-        <label for="EmailButton"> Email Me</label>
-      </button>
+  <n-config-provider :theme="theme">
+    <n-grid x-gap="20" y-gap="20" cols="1">
+      <n-gi>
+        <n-card>
+          <n-avatar round :size="200" :src="profilePhoto" object-fit="cover" />
+          <n-flex vertical>
+            <n-h1>Lyra S.R. Mikkelsen</n-h1>
+            <n-h2>Fullstack Software Engineer</n-h2>
+            <div>
+              <n-tag type="info">C#</n-tag>
+              <n-tag type="info">Typescript/Javascript</n-tag>
+              <n-tag type="info">C/C++</n-tag>
+            </div>
+            <div>
+              <n-tag type="success">.NET</n-tag>
+              <n-tag type="success">Vue.js</n-tag>
+              <n-tag type="success">React</n-tag>
+              <n-tag type="success">Angular</n-tag>
+            </div>
+          </n-flex>
+        </n-card>
+      </n-gi>
+      <n-gi>
+        <n-card>
+          <catCarousel />
+        </n-card>
+      </n-gi>
+      <n-gi>
+        <n-card title="Contact Me">
+          <n-flex>
+            <n-button id="LinkedInButton" @click="redirect('https://www.linkedin.com/in/lyramikkelsen/')">
+              <label for="LinkedInButton"> LinkedIn</label>
+              <template #icon>
+                <n-icon>
+                  <Linkedin />
+                </n-icon>
+              </template>
+            </n-button>
+            <n-button id="githubButton" @click="redirect('https://github.com/SorceressLyra')">
+              <template #icon>
+                <n-icon>
+                  <Github />
+                </n-icon>
+              </template>
+              <label for="githubButton"> Github</label>
+            </n-button>
+            <n-button id="EmailButton" @click="redirect('mailto:lyramikkelsen@gmail.com')">
+              <template #icon>
+                <n-icon>
+                  <MailBulk />
+                </n-icon>
+              </template>
+              <label for="EmailButton"> Email Me</label>
+            </n-button>
 
-    </div>
-  </div>
+          </n-flex>
+        </n-card>
+
+      </n-gi>
+    </n-grid>
+
+  </n-config-provider>
+
 </template>
 
 <script setup lang="ts">
+import { type GlobalTheme, darkTheme } from 'naive-ui';
+import { Github, Linkedin, MailBulk } from '@vicons/fa';
 import profilePhoto from './Assets/Images/me.jpg'
+import catCarousel from './catCarousel.vue';
 
+const theme = darkTheme;
 function redirect(url: string) {
   console.log("Redirecting to: ", url);
-  // window.location.href = url;
+  window.location.href = url;
 }
 </script>
 
@@ -44,36 +84,5 @@ function redirect(url: string) {
   width: 100%;
   max-width: 20rem;
   overflow: hidden;
-}
-
-.contact-info {
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-info h2 {
-  text-align: center;
-}
-
-.details-flex-box {
-  display: flex;
-  flex-direction: column;
-  margin: 5rem;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: row;
-}
-
-/* Mobile Tweaks */
-@media screen and (max-width: 500px) {
-  .details-flex-box {
-    margin: 1rem;
-  }
-
-  .button-container {
-    flex-direction: column;
-  }
 }
 </style>
