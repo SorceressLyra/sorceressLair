@@ -7,17 +7,17 @@
           <n-flex vertical>
             <n-h1>Lyra S.R. Mikkelsen</n-h1>
             <n-h2>Fullstack Software Engineer</n-h2>
-            <div>
+            <n-flex>
               <n-tag type="info">C#</n-tag>
               <n-tag type="info">Typescript/Javascript</n-tag>
               <n-tag type="info">C/C++</n-tag>
-            </div>
-            <div>
+            </n-flex>
+            <n-flex>
               <n-tag type="success">.NET</n-tag>
               <n-tag type="success">Vue.js</n-tag>
               <n-tag type="success">React</n-tag>
               <n-tag type="success">Angular</n-tag>
-            </div>
+            </n-flex>
           </n-flex>
         </n-card>
       </n-gi>
