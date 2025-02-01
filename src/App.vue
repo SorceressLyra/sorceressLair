@@ -14,10 +14,10 @@
           <slabel text="Tailwind" />
           <slabel text="C/C++" />
           <slabel text="Cross-Platform" />
-          <slabel class="bg-active" text="Azure" />
-          <slabel class="bg-active" text="DevOps" />
-          <slabel class="bg-active" text="Agile" />
-          <slabel class="bg-active" text="Google Cloud" />
+          <slabel text="Azure" />
+          <slabel text="DevOps" />
+          <slabel text="Agile" />
+          <slabel text="Google Cloud" />
         </div>
       </template>
     </info-card>
