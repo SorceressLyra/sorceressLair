@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import 'vfonts/Lato.css'
-import 'vfonts/FiraCode.css'
+import './fonts.css'
+import './input.css'
 
 
 const app = createApp(App);
